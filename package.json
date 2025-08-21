@@ -23,6 +23,22 @@
     "node": ">=18.18.0"
   },
   "dependencies": {
+     "name": "bolt-offline",
+  "scripts": {
+    "start": "node server/index.js",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build",
+    "build:server": "tsc -p tsconfig.server.json"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "helmet": "^7.0.0",
+    "compression": "^1.7.4",
+    "node-fetch": "^3.3.2",
+    "@types/node": "^20.0.0"
+  }
+    {
     "@ai-sdk/anthropic": "^0.0.39",
     "@codemirror/autocomplete": "^6.17.0",
     "@codemirror/commands": "^6.6.0",
